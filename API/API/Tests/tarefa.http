@@ -1,0 +1,31 @@
+### Listar todas as tarefas
+GET http://localhost:5000/api/tarefa/listar
+
+### Cadastrar uma nova tarefa
+POST http://localhost:5000/api/tarefa/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Testando 123",
+    "descricao": "testando se sou burra mesmo",
+    "categoriaId": "6d091456-5a2f-4b5a-98fc-f1a3b50a627d"
+    
+}
+
+### Alterar tarefas
+PATCH http://localhost:5000/api/tarefa/alterar/3
+Content-Type: application/json
+
+{
+    "titulo": "Novo Título",
+    "descricao": "Nova Descrição",
+    "status": "Em andamento",
+    "categoriaId": "bfe4e7dc-81e4-4e47-a67b-d4fbf3e124bd"
+}
+
+
+### Tarefas não concluidas
+GET http://localhost:5000/api/tarefa/naoconcluidas
+
+### Tarefas concluidas
+GET http://localhost:5000/api/tarefa/concluidas
